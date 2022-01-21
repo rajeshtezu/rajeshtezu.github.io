@@ -185,3 +185,8 @@ p {
   font-weight: bold;
   font-size: 1rem;
 }
+
+.agreegate {
+  font-weight: bold;
+  color: var(--black);
+}

@@ -37,7 +37,7 @@ function renderEducation() {
       <span class="org-name">${ed.name},</span>
       <span class="exp-sub__text"> ${ed.location} — ${ed.course}</span>
     </h2>
-    <p class="from-to">${ed.fromDate} - ${ed.toDate}</p>
+    <p class="from-to">${ed.fromDate} - ${ed.toDate} - <span class="agreegate">${ed.aggregate}</span></p>
     </article>
     `;
 
