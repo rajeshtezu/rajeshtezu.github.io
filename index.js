@@ -79,7 +79,7 @@ function renderSkills() {
 function getExpData() {
   const experience = [
     {
-      organization: "EdgeVerve Systems",
+      organization: "EdgeVerve Systems Ltd",
       location: "Pune",
       designation: "Product Engineer",
       workedFrom: "OCT 2019",

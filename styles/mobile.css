@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1300px) {
+  .main-container {
+    margin: 1.5rem 1.5rem 3rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .main-container {
+    margin: 1.5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .dev-title {
+    transform: translateY(18rem);
+  }
+
+  .panel-container {
+    flex-direction: column-reverse;
+  }
+}
