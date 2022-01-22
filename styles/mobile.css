@@ -6,6 +6,10 @@ html {
   .main-container {
     margin: 1.5rem 1.5rem 3rem 1.5rem;
   }
+
+  .print-me {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 990px) {

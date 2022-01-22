@@ -2,6 +2,13 @@ const expDiv = document.getElementById("experience");
 const edDiv = document.getElementById("education");
 const workedRecentlyDiv = document.getElementById("workedOnRecently");
 const familiarDiv = document.getElementById("familiarWith");
+const printMeDiv = document.getElementById("printMe");
+
+printMeDiv.addEventListener("click", () => {
+  printMeDiv.style.display = "none";
+  window.print();
+  printMeDiv.style.display = "block";
+});
 
 function renderExperience() {
   const expData = getExpData();
