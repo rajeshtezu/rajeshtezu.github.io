@@ -94,7 +94,7 @@ function getExpData() {
 
       didWhat: [
         `Started working on the frontend part of a product which was using Polymer (1.x) at the frontend side and loopback at backend.`,
-        `Quickly learned Angular framework and created a boilerplate with scalable architecture to be used across the org’s different erent projects.`,
+        `Quickly learned Angular framework and created a boilerplate with scalable architecture to be used across the org’s different projects.`,
         `Took a lead and worked on the migration of a Polymer based application into Angular with UI/UX revamp.`,
         `Used ng-zorro, chart.js, ngx-translate, etc external libraries to achieve functional requirements.`,
         `Implemented some [granular] features like rbac, i18n, token expiration popup, custom reusable ﬁlter, etc.`,
