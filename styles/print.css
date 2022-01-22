@@ -1,0 +1,26 @@
+html {
+  font-size: 12px;
+}
+
+.main-container {
+  margin: 0;
+}
+
+.avatar-container {
+  width: 15rem;
+  height: 15rem;
+}
+
+.dev-name {
+  font-size: 1.75rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.dev-title {
+  transform: translate(12rem, 6rem) rotate(-22deg);
+}
+
+hr {
+  margin-bottom: 0;
+}
