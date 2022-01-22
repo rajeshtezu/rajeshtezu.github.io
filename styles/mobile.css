@@ -32,4 +32,14 @@ html {
   .panel-container {
     flex-direction: column-reverse;
   }
+
+  .address__line {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .address__line {
+    font-size: 0.875rem;
+  }
 }

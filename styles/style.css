@@ -147,7 +147,7 @@ p {
 .address__line {
   display: block;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--one);
   margin-top: 4px;
 }

@@ -167,7 +167,7 @@ function getSkillData() {
     },
     {
       category: `Backend`,
-      value: `Express`,
+      value: `Express.js`,
     },
     {
       category: `API`,
