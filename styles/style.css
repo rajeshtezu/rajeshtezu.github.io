@@ -104,6 +104,10 @@ p {
   font-weight: 550;
 }
 
+.dev-mobile-title {
+  display: none;
+}
+
 .dev-title {
   position: absolute;
   font-size: 2rem;

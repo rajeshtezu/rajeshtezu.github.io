@@ -29,12 +29,65 @@ html {
 }
 
 @media screen and (max-width: 760px) {
+  hr {
+    margin: 1.5rem 0 0 0;
+  }
+
+  .banner {
+    padding: 0;
+  }
+
+  .avatar-container {
+    height: 5rem;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .avatar {
+    width: auto;
+  }
+
+  .avatar:hover {
+    box-shadow: none;
+  }
+
+  .av-name-container {
+    margin-left: 1rem;
+    align-self: center;
+  }
+
+  .dev-name {
+    margin: -0.75rem 0 0 0;
+    font-size: 1.75rem;
+  }
+
+  .dev-mobile-title {
+    display: block;
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--five);
+  }
+
   .dev-title {
-    transform: translateX(-0.55rem) translateY(18rem);
+    display: none;
   }
 
   .dev-title:hover {
     animation: rotateTitle 2s 200ms infinite alternate forwards;
+  }
+
+  .address {
+    margin-top: 0.5rem;
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .address:hover {
+    transform: none;
   }
 
   @keyframes rotateTitle {
@@ -48,7 +101,7 @@ html {
   }
 
   .panel-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .address__line {
@@ -58,6 +111,6 @@ html {
 
 @media screen and (max-width: 400px) {
   .address__line {
-    font-size: 0.875rem;
+    font-size: 1.15rem;
   }
 }
