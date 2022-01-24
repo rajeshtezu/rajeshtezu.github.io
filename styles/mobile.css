@@ -47,7 +47,8 @@ html {
   }
 
   .avatar {
-    width: auto;
+    height: 5rem;
+    width: 5rem;
   }
 
   .avatar:hover {
@@ -102,6 +103,10 @@ html {
 
   .panel-container {
     flex-direction: column;
+  }
+
+  .right-panel {
+    margin-top: 1rem;
   }
 
   .address__line {

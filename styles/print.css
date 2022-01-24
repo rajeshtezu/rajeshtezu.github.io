@@ -6,21 +6,46 @@ html {
   margin: 0;
 }
 
+.banner {
+  align-items: flex-start;
+}
+
 .avatar-container {
-  width: 15rem;
-  height: 15rem;
+  box-shadow: none;
+  height: auto;
+  align-self: flex-end;
+  width: auto;
+}
+
+.avatar {
+  display: none;
+}
+
+.av-name-container {
+  align-self: flex-end;
 }
 
 .dev-name {
-  font-size: 1.75rem;
-  margin-top: 0.5rem;
-  font-weight: 500;
+  font-size: 3.5rem;
+  margin: 0;
 }
 
 .dev-title {
-  transform: translate(12rem, 6rem) rotate(-22deg);
+  display: none;
+}
+
+.dev-mobile-title {
+  display: block;
+  margin: 0;
+  font-size: 2rem;
+  color: var(--five);
+}
+
+.address {
+  box-shadow: none;
+  padding: 0;
 }
 
 hr {
-  margin-bottom: 0;
+  margin: 0.5rem 0;
 }
