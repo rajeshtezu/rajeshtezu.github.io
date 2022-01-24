@@ -30,7 +30,21 @@ html {
 
 @media screen and (max-width: 760px) {
   .dev-title {
-    transform: translateY(18rem);
+    transform: translateX(-0.55rem) translateY(18rem);
+  }
+
+  .dev-title:hover {
+    animation: rotateTitle 2s 200ms infinite alternate forwards;
+  }
+
+  @keyframes rotateTitle {
+    from {
+      transform: translateX(-0.55rem) translateY(18rem) rotateZ(0deg);
+    }
+
+    to {
+      transform: translateX(-0.55rem) translateY(18rem) rotateZ(5deg);
+    }
   }
 
   .panel-container {

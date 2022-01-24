@@ -129,7 +129,7 @@ p {
   }
 
   to {
-    transform: var(--translateTitle) rotateZ(338deg);
+    transform: var(--translateTitle) rotateZ(-15deg);
   }
 }
 
