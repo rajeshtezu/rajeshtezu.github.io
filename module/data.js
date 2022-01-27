@@ -2,7 +2,7 @@ const experience = [
   {
     organization: "EdgeVerve Systems Ltd",
     location: "Pune",
-    designation: "Product Engineer",
+    designation: "Member Of Techical Staff",
     workedFrom: "OCT 2019",
     workedTo: "PRESENT",
 
