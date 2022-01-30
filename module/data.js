@@ -9,7 +9,7 @@ const experience = [
     didWhat: [
       `Started working on the frontend part of a product which was using Polymer (1.x) at the frontend side and loopback at backend.`,
       `Quickly learned Angular framework and created a boilerplate with scalable architecture to be used across the org’s different projects.`,
-      `Took a lead and worked on the migration of a Polymer based application into Angular with UI/UX revamp.`,
+      `Took a lead in upgrading the Polymer based application into Angular with next generation UI/UX containing many new additional features.`,
       `Used ng-zorro, chart.js, ngx-translate, etc external libraries to achieve functional requirements.`,
       `Implemented some [granular] features like rbac, i18n, token expiration popup, custom reusable ﬁlter, etc.`,
       `Worked on UI responsiveness to accommodate multiple screen sizes. Contributed to multiple releases.`,

@@ -121,6 +121,7 @@ p {
   padding: 0 1rem;
   box-shadow: var(--boxShadow);
   cursor: default;
+  animation: rotateTitle 2s 200ms 4 alternate forwards;
 }
 
 .dev-title:hover {
