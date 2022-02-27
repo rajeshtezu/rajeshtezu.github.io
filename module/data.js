@@ -72,7 +72,7 @@ const workedOnRecently = [
   },
   {
     category: `Frontend`,
-    value: `Angular, React.js, HTML[5], CSS[3], Less, Saas, Scss, Ant.design, ng-zorro, Bootstrap, Material UI, chart.js, d3.js, karma, jasmine, jest`,
+    value: `Angular, React.js, HTML[5], CSS[3], Less, Saas, Scss, Ant.design, ng-zorro, Bootstrap, Material UI, chart.js, karma, jasmine, jest`,
   },
   {
     category: `Server Runtime`,
