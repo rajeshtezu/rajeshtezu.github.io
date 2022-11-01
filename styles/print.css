@@ -49,3 +49,7 @@ html {
 hr {
   margin: 0.5rem 0;
 }
+
+ul li {
+  margin-left: -0.875rem;
+}

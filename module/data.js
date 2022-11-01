@@ -1,10 +1,21 @@
 const experience = [
   {
+    organization: "Cisco Systems | Webex",
+    location: "Bangalore",
+    designation: "Software Engineer III",
+    workedFrom: "MAY 2022",
+    workedTo: "PRESENT",
+
+    didWhat: [
+      `Started working on webex javascript SDK`
+    ],
+  },
+  {
     organization: "EdgeVerve Systems Ltd",
     location: "Pune",
-    designation: "Member Of Techical Staff",
+    designation: "Member Of Technical Staff",
     workedFrom: "OCT 2019",
-    workedTo: "PRESENT",
+    workedTo: "MAY 2022",
 
     didWhat: [
       `Started working on the frontend part of a product which was using Polymer (1.x) at the frontend side and loopback at backend.`,

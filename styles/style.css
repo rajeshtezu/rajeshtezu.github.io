@@ -222,3 +222,7 @@ p {
 .print-me:hover {
   color: var(--white);
 }
+
+ul li {
+  margin-left: -0.875rem;
+}

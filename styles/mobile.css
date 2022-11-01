@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -117,5 +117,9 @@ html {
 @media screen and (max-width: 400px) {
   .address__line {
     font-size: 1.15rem;
+  }
+  
+  ul li {
+    margin-left: -1.45rem;
   }
 }
