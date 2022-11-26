@@ -24,7 +24,7 @@ html {
   }
 
   .address {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -38,12 +38,17 @@ html {
   }
 
   .avatar-container {
-    height: 5rem;
     padding: 0;
     display: flex;
     width: 100%;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  .avatar-img-container {
+    box-shadow: none;
+    height: auto;
+    width: auto;
   }
 
   .avatar {
@@ -118,7 +123,7 @@ html {
   .address__line {
     font-size: 1.15rem;
   }
-  
+
   ul li {
     margin-left: -1.45rem;
   }

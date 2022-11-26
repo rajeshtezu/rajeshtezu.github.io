@@ -1,7 +1,6 @@
 @import url('../../common-style.css');
 
 hr {
-  margin: 3rem 0 1.5rem 0;
   border: 1px solid var(--four);
   background: var(--four);
 }
@@ -17,32 +16,39 @@ p {
 }
 
 .main-container {
-  margin: 0 15% 5rem 15%;
+  margin: 0 auto 5rem auto;
+  max-width: 80rem;
 }
 
 /* ---------------------- Banner style  - Start ---------------------------- */
 .banner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   padding: 1rem;
 }
 
 .avatar-container {
-  box-shadow: var(--boxShadow);
-  padding: 0.5rem;
-  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  width: 23rem;
-  height: 23rem;
   margin: 0;
   box-sizing: border-box;
 }
 
+.avatar-img-container {
+  box-shadow: var(--boxShadow);
+  border-radius: 50%;
+  padding: 0.25rem;
+  box-sizing: border-box;
+  height: 12.5rem;
+  width: 12.5rem;
+}
+
 .avatar {
   border-radius: 50%;
-  height: 100%;
-  width: 100%;
+  height: 12rem;
+  width: 12rem;
   cursor: default;
 }
 
@@ -54,7 +60,7 @@ p {
 
 .dev-name {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-top: 0rem;
   font-weight: 550;
 }
@@ -64,6 +70,13 @@ p {
 }
 
 .dev-title {
+  font-size: 1.5rem;
+  color: var(--five);
+  margin-top: -2rem;
+  text-align: center;
+}
+
+/* .dev-title {
   position: absolute;
   font-size: 2rem;
   top: 0;
@@ -91,6 +104,13 @@ p {
   to {
     transform: var(--translateTitle) rotateZ(-15deg);
   }
+} */
+
+.address--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .address {
@@ -159,7 +179,6 @@ p {
 }
 
 .print-me {
-  float: right;
   padding: 0.25rem 1rem;
   outline: none;
   border: none;
@@ -168,10 +187,7 @@ p {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  position: absolute;
-  position: absolute;
-  right: 20%;
-  top: 10%;
+  margin-bottom: 2rem;
 }
 
 .print-me:hover {
