@@ -29,7 +29,15 @@ export const addressData = {
 
 export const aboutMeText = `
   <p> 
-    I'm a Software Engineer by profession, currently working at "Cisco | WebEx" where I am contributing to webex-js-sdk and its helper libraries.
+    I'm a Software Engineer by profession. I enjoy exploring new technologies and building something out of it. 
+  </p>
+
+  <p>
+    I have worked as a full stack web developer for most of my career and from past couple of years I have been working mostly on frontend web development.
+  </p>
+
+  <p>
+    Feel free to reach out for help or discussion on building something cool <span class="emoji">&#128526;</span>
   </p>
 
   <p style="margin-top: 2rem;">
