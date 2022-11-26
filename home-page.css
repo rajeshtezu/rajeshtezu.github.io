@@ -9,8 +9,8 @@ body {
   margin: 0;
 }
 
-ul li {
-  font-size: 1.25rem;
+ol li {
+  font-size: 1.125rem;
   font-weight: 500;
 }
 
@@ -23,10 +23,19 @@ a {
 }
 
 .header {
-  background-color: var(--five);
-  padding: 1.5rem;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(45deg, var(--one), transparent);
+  padding: 3rem 10rem;
   color: white;
+}
+
+.avatar-container {
+  background-color: var(--text-color);
+  border-radius: 50%;
+  padding: 0.25rem;
+  display: flex;
+  box-shadow: var(--boxShadow);
 }
 
 .avatar {
@@ -44,9 +53,14 @@ a {
 .header__flex {
   display: flex;
   align-items: center;
+  max-width: 80rem;
 }
 
 .header__left {
+  flex: 0.4;
+}
+
+.header__middle {
   display: flex;
   flex: 0.2;
   flex-direction: column;
@@ -54,7 +68,7 @@ a {
 }
 
 .header__right {
-  flex: 0.8;
+  flex: 0.4;
   margin-left: 1rem;
 }
 
@@ -62,7 +76,6 @@ a {
   display: inline-block;
   font-size: 5rem;
   padding: 0.5rem;
-  background-color: white;
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -77,14 +90,25 @@ a {
   background-color: #000;
 }
 
+.bg-text-color {
+  background-color: var(--text-color);
+}
+
 .name {
   margin: 0;
+  color: var(--text-color);
 }
 
 .content {
   display: flex;
-  margin-top: 1.5rem;
-  height: 62vh;
+  justify-content: center;
+  margin: 1.5rem;
+  height: 60vh;
+}
+
+.content-container {
+  display: flex;
+  width: 109rem;
 }
 
 .content--child {
@@ -97,4 +121,56 @@ a {
 
 .content--child__right {
   margin-left: 1.5rem;
+}
+
+.address {
+}
+
+.address__line {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  background-color: var(--two);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  box-shadow: 6px 6px 4px 1px rgb(0 0 0 / 40%);
+  font-style: normal;
+}
+
+.email-text {
+  width: 18rem;
+  background-color: #eb6440;
+}
+
+.bg-linkedin {
+  background-color: #0a66c2;
+}
+
+.bg-github {
+  background-color: #000;
+}
+
+.bg-resume {
+  background-color: var(--two);
+}
+
+.about-me {
+}
+
+.hi-there {
+  font-size: 1.25rem;
+}
+
+.emoji {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Right child - start */
+
+.content-title {
+  color: var(--two);
+  font-size: 1.5rem;
+  margin: 0;
 }
