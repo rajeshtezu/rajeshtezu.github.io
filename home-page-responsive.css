@@ -16,6 +16,10 @@ html {
     font-size: 2.5rem;
   }
 
+  .content {
+    height: auto;
+  }
+
   .content-container {
     display: block;
     width: auto;
@@ -78,6 +82,7 @@ html {
   .separator {
     display: block;
     margin: 0 0 1.5rem 0;
+    background-color: var(--five);
     border: 0.5px solid var(--five);
   }
 }
