@@ -55,6 +55,10 @@ function getClockEmojis() {
 
 export const edContent = [
   {
+    text: 'Git',
+    link: 'https://github.com/rajeshtezu90/Library/tree/main/git#readme',
+  },
+  {
     text: 'Python | Automate the boring stuff',
     link: 'http://github.com/rajeshtezu90/automateboringstuff',
   },
