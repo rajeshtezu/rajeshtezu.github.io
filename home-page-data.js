@@ -59,8 +59,12 @@ export const edContent = [
     link: 'https://github.com/rajeshtezu90/Library/tree/main/git#readme',
   },
   {
+    text: 'Basics of Linux',
+    link: 'https://github.com/rajeshtezu90/Library/blob/main/linux-basics/README.md',
+  },
+  {
     text: 'Python | Automate the boring stuff',
-    link: 'http://github.com/rajeshtezu90/automateboringstuff',
+    link: 'https://github.com/rajeshtezu90/automateboringstuff#readme',
   },
   {
     text: 'WebRTC - Coming soon...',
