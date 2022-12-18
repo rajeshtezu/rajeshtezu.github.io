@@ -67,6 +67,18 @@ export const edContent = [
     link: 'https://github.com/rajeshtezu90/automateboringstuff#readme',
   },
   {
+    text: 'DSA with Javascript',
+    link: 'https://github.com/rajeshtezu90/ds-algo#readme',
+  },
+  {
+    text: 'Angular',
+    link: 'https://github.com/rajeshtezu90/Library/blob/main/web/angular/README.md',
+  },
+  {
+    text: 'Ampersand-State',
+    link: 'https://github.com/rajeshtezu90/Library/blob/main/ampersand/ampersand-state.md',
+  },
+  {
     text: 'WebRTC - Coming soon...',
     link: '#',
   },
