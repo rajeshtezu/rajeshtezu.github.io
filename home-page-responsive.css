@@ -59,6 +59,31 @@ html {
   .email-text {
     width: 18rem;
   }
+
+  .subscription-form {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .input-flex-container {
+    display: block;
+  }
+
+  .input-container {
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+
+  .input-container label {
+    flex: 0.3;
+    width: auto;
+  }
+
+  .input-container input {
+    flex: 0.7;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 414px) {

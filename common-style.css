@@ -1,5 +1,5 @@
 :root {
-  /* Color palatte - start */
+  /* Color palette - start */
   --one: #264653;
   --two: #2a9d8f;
   --three: #e9c46a;
@@ -9,7 +9,7 @@
   --white: #fff;
   --black: #000;
   --text-color: #4a4a44;
-  /* Color palatte - end */
+  /* Color palette - end */
 
   font-family: 'Poppins', sans-serif;
   --boxShadow: 8px 8px 16px 1px rgba(0, 0, 0, 0.4);

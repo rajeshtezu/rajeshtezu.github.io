@@ -1,10 +1,12 @@
-import { leftIcons, rightIcons, addressData, aboutMeText, edContent } from './home-page-data.js';
+import { leftIcons, rightIcons, addressData, aboutMeText } from './home-page-data.js';
+import { environment } from './environment.js';
 
 const headerLeftElm = document.getElementById('header-left');
 const headerRightElm = document.getElementById('header-right');
 const addressElm = document.getElementById('address');
 const aboutMeElm = document.getElementById('about-me');
 const edLinksElm = document.getElementById('ed-links');
+const subscriptionFormElm = document.getElementById('subscription-form');
 
 function addIconsToHeader(element, header) {
   element.innerHTML = header;
@@ -47,9 +49,23 @@ function addAboutMe() {
   aboutMeElm.innerHTML = aboutMeText;
 }
 
-function addEdLinks() {
+async function fetchEdLinks() {
+  try {
+    const edUrl = environment.edLinkUrl;
+    const response = await fetch(edUrl);
+
+    return response.json();
+  } catch (error) {
+    console.error(error);
+    // Fail silently
+  }
+}
+
+async function addEdLinks() {
+  const edLinks = await fetchEdLinks();
+
   edLinksElm.innerHTML = `
-    ${edContent.reduce((acc, item) => {
+    ${edLinks.reduce((acc, item) => {
       acc += `
         <li>
           <a href="${item.link}" target="_blank" style="color: #0969da">${item.text}</a>
@@ -61,15 +77,48 @@ function addEdLinks() {
   `;
 }
 
-function main() {
+async function main() {
   addIconsToHeader(headerLeftElm, leftIcons);
   addIconsToHeader(headerRightElm, rightIcons);
 
   addAddress();
   addAboutMe();
-  addEdLinks();
+  await addEdLinks();
 }
 
-(() => {
-  main();
+// Subscription
+async function subscribe(email, mobile) {
+  try {
+    const response = await fetch(environment.subscriptionUrl, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, mobile }),
+    });
+
+    console.log('Response: ', response);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// Subscription
+subscriptionFormElm.addEventListener('submit', handleSubscription);
+
+async function handleSubscription(e) {
+  e.preventDefault();
+
+  const formData = new FormData(subscriptionFormElm);
+  const email = formData.get('email');
+
+  await subscribe(email, 'NA');
+  subscriptionFormElm.reset();
+  alert('Subscribed successfully.');
+  e.stopPropagation();
+}
+
+(async () => {
+  await main();
 })();
