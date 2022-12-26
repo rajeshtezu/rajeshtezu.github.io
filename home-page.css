@@ -180,6 +180,11 @@ a {
   margin: 0;
 }
 
+.content-sub-title {
+  font-size: 1.25rem;
+  color: var(--one);
+}
+
 .footer {
   text-align: center;
   background-color: var(--text-color);

@@ -5,15 +5,22 @@ const headerLeftElm = document.getElementById('header-left');
 const headerRightElm = document.getElementById('header-right');
 const addressElm = document.getElementById('address');
 const aboutMeElm = document.getElementById('about-me');
-const edLinksElm = document.getElementById('ed-links');
+const techEdLinksElm = document.getElementById('tech-ed-links');
+const otherEdLinksElm = document.getElementById('other-ed-links');
 const subscriptionFormElm = document.getElementById('subscription-form');
 
 function addIconsToHeader(element, header) {
-  element.innerHTML = header;
+  try {
+    element.innerHTML = header;
+  } catch (error) {
+    // Fail silently
+    console.error(error);
+  }
 }
 
 function addAddress() {
-  addressElm.innerHTML = `
+  try {
+    addressElm.innerHTML = `
     <a class="address__line email-text" href="mailto:${addressData.email}" rel="noopener noreferrer">
       <i class="fas fa-envelope"></i>
       ${addressData.email}
@@ -43,16 +50,24 @@ function addAddress() {
       <i class="fas fa-file"></i> Resume
     </a>
   `;
+  } catch (error) {
+    // Fail silently
+    console.error(error);
+  }
 }
 
 function addAboutMe() {
-  aboutMeElm.innerHTML = aboutMeText;
+  try {
+    aboutMeElm.innerHTML = aboutMeText;
+  } catch (error) {
+    // Fail silently
+    console.error(error);
+  }
 }
 
-async function fetchEdLinks() {
+async function fetchLinks(url) {
   try {
-    const edUrl = environment.edLinkUrl;
-    const response = await fetch(edUrl);
+    const response = await fetch(url);
 
     return response.json();
   } catch (error) {
@@ -61,11 +76,9 @@ async function fetchEdLinks() {
   }
 }
 
-async function addEdLinks() {
-  const edLinks = await fetchEdLinks();
-
-  edLinksElm.innerHTML = `
-    ${edLinks.reduce((acc, item) => {
+function addEdLinks(linkList, elm) {
+  elm.innerHTML = `
+    ${linkList.reduce((acc, item) => {
       acc += `
         <li>
           <a href="${item.link}" target="_blank" style="color: #0969da">${item.text}</a>
@@ -77,13 +90,26 @@ async function addEdLinks() {
   `;
 }
 
+async function addTechEdLinks() {
+  const techEdUrl = environment.techEdLinkUrl;
+  const techEdLinks = await fetchLinks(techEdUrl);
+  addEdLinks(techEdLinks, techEdLinksElm);
+}
+
+async function addOtherEdLinks() {
+  const otherEdUrl = environment.otherEdLinkUrl;
+  const otherEdLinks = await fetchLinks(otherEdUrl);
+  addEdLinks(otherEdLinks, otherEdLinksElm);
+}
+
 async function main() {
   addIconsToHeader(headerLeftElm, leftIcons);
   addIconsToHeader(headerRightElm, rightIcons);
 
   addAddress();
   addAboutMe();
-  await addEdLinks();
+  await addTechEdLinks();
+  await addOtherEdLinks();
 }
 
 // Subscription
