@@ -1,4 +1,4 @@
-@import url('./common-style.css');
+@import url("./common-style.css");
 
 html {
   font-size: 16px;
@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+.main {
+  display: flex;
+}
+
 .main-container {
   margin: 1.5rem;
 }
@@ -25,6 +29,8 @@ a {
 .header {
   display: flex;
   justify-content: center;
+  flex: 0.3;
+  max-width: 31rem;
   background-image: linear-gradient(45deg, var(--one), transparent);
   padding: 1.5rem 0;
   color: white;
@@ -52,7 +58,6 @@ a {
 
 .header__flex {
   display: flex;
-  align-items: center;
   max-width: 80rem;
 }
 
@@ -62,7 +67,6 @@ a {
 
 .header__middle {
   display: flex;
-  flex: 0.2;
   flex-direction: column;
   align-items: center;
 }
@@ -105,27 +109,19 @@ a {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem;
-  height: 60vh;
 }
 
 .content-container {
   display: flex;
-  width: 109rem;
+  /* width: 109rem; */
 }
 
 .content--child {
-  flex: 0.5;
-  box-shadow: var(--boxShadow);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  overflow-y: auto;
-}
-
-.content--child__right {
-  margin-left: 1.5rem;
+  /* flex: 0.5; */
+  /* box-shadow: var(--boxShadow); */
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  /* border-radius: 0.5rem; */
+  /* overflow-y: auto; */
 }
 
 .address {
@@ -133,7 +129,7 @@ a {
 
 .address__line {
   margin: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   background-color: var(--two);
   color: white;
   padding: 0.5rem 1rem;
@@ -141,10 +137,11 @@ a {
   display: inline-block;
   box-shadow: 6px 6px 4px 1px rgb(0 0 0 / 40%);
   font-style: normal;
+  min-width: 5.5rem;
 }
 
 .email-text {
-  width: 18rem;
+  /* width: 18rem; */
   background-color: #eb6440;
 }
 
@@ -189,7 +186,7 @@ a {
   text-align: center;
   background-color: var(--text-color);
   color: white;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .footer--name a {
@@ -208,9 +205,12 @@ footer p {
   font-size: 1.25rem;
   align-items: center;
   justify-content: space-between;
-  background: var(--three);
+  /* background: var(--three); */
+  background-image: linear-gradient(45deg, var(--one), transparent);
   border-radius: 4px;
   margin-bottom: 1rem;
+  color: white;
+  max-width: 40rem;
 }
 
 .input-container {
@@ -250,6 +250,10 @@ footer p {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.bell-icon {
+  display: none !important;
+}
+
 /* Remove Arrows/Spinners */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -259,6 +263,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }

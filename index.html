@@ -31,80 +31,104 @@
     <link rel="icon" type="image/x-icon" href="/assets/avatar.jpg" />
 
     <link rel="stylesheet" href="home-page.css" />
-    <link href="home-page-responsive.css" rel="stylesheet" media="screen and (max-width: 1500px)" />
+    <link
+      href="home-page-responsive.css"
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <main>
+    <main class="main">
       <header class="header">
-        <div class="header__flex">
-          <div id="header-left" class="header__left"></div>
-
-          <div id="header-middle" class="header__middle">
-            <div class="avatar-container">
-              <img src="/assets/avatar.jpg" alt="Avatar" class="avatar" />
-            </div>
-
-            <h1 class="name">Rajesh Kumar</h1>
+        <div id="header-middle" class="header__middle">
+          <div class="avatar-container">
+            <img src="/assets/avatar.jpg" alt="Avatar" class="avatar" />
           </div>
 
-          <div id="header-right" class="header__right"></div>
-        </div>
-      </header>
+          <h1 class="name">Rajesh Kumar</h1>
 
-      <section class="content">
-        <div class="content-container">
           <section class="content--child">
             <address id="address"></address>
 
             <div class="about-me">
-              <p class="hi-there"><span class="emoji">&#128075;</span> Hi There!</p>
-
+              <p class="hi-there"><span class="emoji">👋</span> Hi There!</p>
               <p id="about-me"></p>
             </div>
           </section>
-
-          <section class="content--child content--child__right">
-            <hr class="separator" />
-
-            <!-- Subscription form - start -->
-            <form id="subscription-form" class="subscription-form">
-              <div class="input-container">
-                <label for="email" aria-placeholder="abc@xyz.com" aria-required="true">Email*</label>
-                <input type="email" name="email" id="email" placeholder="abc@xyz.com" required />
-              </div>
-
-              <input type="submit" value="Subscribe" class="subscribe-btn" />
-            </form>
-            <!-- Subscription form - end -->
-
-            <h1 class="content-title">Would like to learn something? Hit the links below.</h1>
-            <h2 class="content-sub-title">Computer and Web Technologies</h2>
-            <ol id="tech-ed-links"></ol>
-
-            <h1 class="content-sub-title">Others</h1>
-            <ol id="other-ed-links"></ol>
-          </section>
         </div>
-      </section>
+      </header>
 
-      <footer class="footer">
-        <p>
-          Designed and developed by
-          <span class="footer--name">
-            <a href="https://github.com/rajeshtezu90" target="_blank" rel="noopener noreferrer">Rajesh Kumar</a>
-          </span>
-        </p>
-        <p>Built with vanilla JS, CSS3 and HTML5</p>
-        <p>It's reusable template. Feel free to copy <span class="emoji">&#128406;</span></p>
-      </footer>
+      <section class="content--child content--child__right" style="flex: 0.7">
+        <!-- Subscription form - start -->
+        <form id="subscription-form" class="subscription-form">
+          <div class="input-container">
+            <label
+              for="email"
+              aria-placeholder="abc@xyz.com"
+              aria-required="true"
+              class="email-label"
+            >
+              Email*
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="abc@xyz.com"
+              required
+            />
+          </div>
+
+          <button type="submit" class="subscribe-btn">
+            <span class="subscribe-text">Subscribe</span>
+            <i class="fas fa-bell bell-icon"></i>
+          </button>
+        </form>
+        <!-- Subscription form - end -->
+
+        <h1 class="content-title">
+          Would like to learn something? Hit the links below.
+        </h1>
+        <h2 class="content-sub-title">Computer and Web Technologies</h2>
+        <ol id="tech-ed-links" class="link-container"></ol>
+
+        <h1 class="content-sub-title">Others</h1>
+        <ol id="other-ed-links" class="link-container"></ol>
+      </section>
     </main>
 
+    <footer class="footer">
+      <p>
+        Designed and developed by
+        <span class="footer--name">
+          <a
+            href="https://github.com/rajeshtezu90"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rajesh Kumar
+          </a>
+        </span>
+      </p>
+      <p>Built with vanilla JS, CSS3 and HTML5</p>
+      <p>
+        It's reusable template. Feel free to copy
+        <span class="emoji">🖖</span>
+      </p>
+    </footer>
+
     <script type="module" src="home-page.js" defer></script>
-    <script src="https://kit.fontawesome.com/276296e4e9.js" crossorigin="anonymous" defer></script>
+    <script
+      src="https://kit.fontawesome.com/276296e4e9.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </body>
 </html>
