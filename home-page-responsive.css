@@ -119,6 +119,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: var(--five);
+    box-shadow: 3px 3px 4px 1px rgb(0 0 0 / 40%);
   }
 
   .subscribe-text {

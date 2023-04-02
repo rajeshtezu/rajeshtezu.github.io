@@ -1,11 +1,11 @@
-import { addressData, aboutMeText } from "./home-page-data.js";
-import { environment } from "./environment.js";
+import { addressData, aboutMeText } from './home-page-data.js';
+import { environment } from './environment.js';
 
-const addressElm = document.getElementById("address");
-const aboutMeElm = document.getElementById("about-me");
-const techEdLinksElm = document.getElementById("tech-ed-links");
-const otherEdLinksElm = document.getElementById("other-ed-links");
-const subscriptionFormElm = document.getElementById("subscription-form");
+const addressElm = document.getElementById('address');
+const aboutMeElm = document.getElementById('about-me');
+const techEdLinksElm = document.getElementById('tech-ed-links');
+const otherEdLinksElm = document.getElementById('other-ed-links');
+const subscriptionFormElm = document.getElementById('subscription-form');
 
 function addAddress() {
   try {
@@ -75,7 +75,7 @@ function addEdLinks(linkList, elm) {
       `;
 
       return acc;
-    }, "")}      
+    }, '')}      
   `;
 }
 
@@ -102,33 +102,39 @@ async function main() {
 async function subscribe(email, mobile) {
   try {
     const response = await fetch(environment.subscriptionUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email, mobile }),
     });
 
-    console.log("Response: ", response);
+    console.log('Response: ', response);
   } catch (err) {
     console.error(err);
   }
 }
 
 // Subscription
-subscriptionFormElm.addEventListener("submit", handleSubscription);
+if (subscriptionFormElm) {
+  subscriptionFormElm.addEventListener('submit', handleSubscription);
 
-async function handleSubscription(e) {
-  e.preventDefault();
+  async function handleSubscription(e) {
+    try {
+      e.preventDefault();
+      const formData = new FormData(subscriptionFormElm);
+      const email = formData.get('email');
 
-  const formData = new FormData(subscriptionFormElm);
-  const email = formData.get("email");
-
-  await subscribe(email, "NA");
-  subscriptionFormElm.reset();
-  alert("Subscribed successfully.");
-  e.stopPropagation();
+      await subscribe(email, 'NA');
+      subscriptionFormElm.reset();
+      alert('Subscribed successfully.');
+    } catch (error) {
+      console.error('Subscription Error: ', error);
+    } finally {
+      e.stopPropagation();
+    }
+  }
 }
 
 (async () => {
