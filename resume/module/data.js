@@ -1,21 +1,19 @@
 const experience = [
   {
-    organization: "Cisco Systems | Webex",
-    location: "Bangalore",
-    designation: "Software Engineer III",
-    workedFrom: "MAY 2022",
-    workedTo: "PRESENT",
+    organization: 'Cisco Systems | Webex',
+    location: 'Bangalore',
+    designation: 'Software Engineer III',
+    workedFrom: 'MAY 2022',
+    workedTo: 'PRESENT',
 
-    didWhat: [
-      `Started working on webex javascript SDK`
-    ],
+    didWhat: [`Started working on webex javascript SDK`],
   },
   {
-    organization: "EdgeVerve Systems Ltd",
-    location: "Pune",
-    designation: "Member Of Technical Staff",
-    workedFrom: "OCT 2019",
-    workedTo: "MAY 2022",
+    organization: 'EdgeVerve Systems Ltd',
+    location: 'Pune',
+    designation: 'Member Of Technical Staff',
+    workedFrom: 'OCT 2019',
+    workedTo: 'MAY 2022',
 
     didWhat: [
       `Started working on the frontend part of a product which was using Polymer (1.x) at the frontend side and loopback at backend.`,
@@ -28,11 +26,11 @@ const experience = [
   },
 
   {
-    organization: "CauseCode Technologies",
-    location: "Pune",
-    designation: "Software Engineer",
-    workedFrom: "FEB 2018",
-    workedTo: "SEPT 2019",
+    organization: 'CauseCode Technologies',
+    location: 'Pune',
+    designation: 'Software Engineer',
+    workedFrom: 'FEB 2018',
+    workedTo: 'SEPT 2019',
 
     didWhat: [
       `Joined as a fullstack developer, explored Typescript, Node.js, AWS lambda, and GraphQL technologies and migrated an entire backend from RESTful to GraphQL.`,
@@ -43,11 +41,11 @@ const experience = [
   },
 
   {
-    organization: "Tata Consultancy Services",
-    location: "Pune",
-    designation: "ASE Trainee",
-    workedFrom: "FEB 2017",
-    workedTo: "JAN 2018",
+    organization: 'Tata Consultancy Services',
+    location: 'Pune',
+    designation: 'ASE Trainee',
+    workedFrom: 'FEB 2017',
+    workedTo: 'JAN 2018',
 
     didWhat: [
       `Joined as a Graduate Hire, trained on .NET technologies.`,
@@ -83,7 +81,7 @@ const workedOnRecently = [
   },
   {
     category: `Frontend`,
-    value: `Angular, React.js, HTML[5], CSS[3], Less, Saas, Scss, Ant.design, ng-zorro, Bootstrap, Material UI, chart.js, karma, jasmine, jest`,
+    value: `Angular, RxJs, NgRx, React.js, HTML[5], CSS[3], Less, Saas, Scss, Ant.design, ng-zorro, Bootstrap, Material UI, chart.js, karma, jasmine, jest`,
   },
   {
     category: `Server Runtime`,

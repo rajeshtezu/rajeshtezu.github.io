@@ -1,8 +1,8 @@
 export const addressData = {
-  email: "rajeshtezu90@gmail.com",
-  github: "rajeshtezu90",
-  linkedin: "rajeshtezu90",
-  resume: "./resume/index.html",
+  email: 'rajeshtezu90@gmail.com',
+  github: 'rajeshtezu90',
+  linkedin: 'rajeshtezu90',
+  resume: './resume',
 };
 
 export const aboutMeText = `
