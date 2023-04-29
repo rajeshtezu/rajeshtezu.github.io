@@ -15,7 +15,7 @@ export const aboutMeText = `
   </p>
 
   <p>
-    Feel free to reach out for help or discussion on building something cool <span class="emoji">&#128526;</span>
+    Feel free to reach out for any help or to discuss about building something cool <span class="emoji">&#128526;</span>
   </p>
 
   <p style="margin-top: 2rem;">

@@ -76,13 +76,13 @@ html {
   .address {
   }
 
-  .address__line {
+  /* .address__line {
     width: 7.5rem;
-  }
+  } */
 
-  .email-text {
+  /* .email-text {
     width: 18rem;
-  }
+  } */
 
   .subscription-form {
     align-items: flex-start;
@@ -113,7 +113,7 @@ html {
 
   .subscribe-btn {
     width: 2.5rem;
-    height: 2.5rem;
+    /* height: 2.5rem; */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -137,13 +137,13 @@ html {
     padding: 0.5rem;
   }
 
-  .address__line {
+  /* .address__line {
     width: 7.5rem;
-  }
+  } */
 
-  .email-text {
+  /* .email-text {
     width: 18rem;
-  }
+  } */
 
   .separator {
     display: block;

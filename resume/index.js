@@ -1,19 +1,24 @@
-import { analytics, logEvent } from "./module/firebase.js";
-import { experience, edData, workedOnRecently, familiarWith } from "./module/data.js";
+import { analytics, logEvent } from './module/firebase.js';
+import {
+  experience,
+  edData,
+  workedOnRecently,
+  familiarWith,
+} from './module/data.js';
 
-const expDiv = document.getElementById("experience");
-const edDiv = document.getElementById("education");
-const workedRecentlyDiv = document.getElementById("workedOnRecently");
-const familiarDiv = document.getElementById("familiarWith");
-const printMeDiv = document.getElementById("printMe");
+const expDiv = document.getElementById('experience');
+const edDiv = document.getElementById('education');
+const workedRecentlyDiv = document.getElementById('workedOnRecently');
+const familiarDiv = document.getElementById('familiarWith');
+const printMeDiv = document.getElementById('printMe');
 
-printMeDiv.addEventListener("click", () => {
-  printMeDiv.style.display = "none";
+printMeDiv.addEventListener('click', () => {
+  printMeDiv.style.display = 'none';
   window.print();
-  printMeDiv.style.display = "block";
+  printMeDiv.style.display = 'block';
 
-  logEvent(analytics, "resume_downloaded", {
-    name: "resume",
+  logEvent(analytics, 'resume_downloaded', {
+    name: 'resume',
   });
 });
 
@@ -28,13 +33,13 @@ function renderExperience() {
     <p class="from-to">${exp.workedFrom} - ${exp.workedTo}</p>
 
     <ul> 
-      ${exp.didWhat.reduce((liAcc, work) => (liAcc += `<li>${work}</li>`), "")}
+      ${exp.didWhat.reduce((liAcc, work) => (liAcc += `<li>${work}</li>`), '')}
     </ul>
   </article>
   `;
 
     return acc;
-  }, "");
+  }, '');
 
   expDiv.innerHTML = template;
 }
@@ -47,12 +52,12 @@ function renderEducation() {
       <span class="org-name">${ed.name},</span>
       <span class="exp-sub__text"> ${ed.location} — ${ed.course}</span>
     </h2>
-    <p class="from-to">${ed.fromDate} - ${ed.toDate} - <span class="agreegate">${ed.aggregate}</span></p>
+    <p class="from-to">${ed.fromDate} - ${ed.toDate} - <span class="aggregate">${ed.aggregate}</span></p>
     </article>
     `;
 
     return acc;
-  }, "");
+  }, '');
 
   edDiv.innerHTML = template;
 }
@@ -63,7 +68,7 @@ function renderSkills() {
       (acc += `
     <p><span class="skill-title">${skill.category} : </span> ${skill.value}</p>
   `),
-    ""
+    ''
   );
 
   const familiarWithTemplate = familiarWith.reduce(
@@ -71,7 +76,7 @@ function renderSkills() {
       (acc += `
     <p><span class="skill-title">${skill.category} : </span> ${skill.value}</p>
   `),
-    ""
+    ''
   );
 
   workedRecentlyDiv.innerHTML = workedRecentlyTemplate;
@@ -84,7 +89,7 @@ function renderSkills() {
   renderSkills();
 })();
 
-logEvent(analytics, "page_visited", {
+logEvent(analytics, 'page_visited', {
   user_agent: navigator.userAgent,
   connection_type: navigator.connection?.effectiveType,
   device_memory: navigator.deviceMemory,
@@ -93,7 +98,7 @@ logEvent(analytics, "page_visited", {
 });
 
 navigator.geolocation.getCurrentPosition((location) => {
-  logEvent(analytics, "location", {
+  logEvent(analytics, 'location', {
     user_location: JSON.stringify(location),
   });
 });

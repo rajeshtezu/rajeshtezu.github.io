@@ -11,8 +11,7 @@ function addAddress() {
   try {
     addressElm.innerHTML = `
     <a class="address__line email-text" href="mailto:${addressData.email}" rel="noopener noreferrer">
-      <i class="fas fa-envelope"></i>
-      ${addressData.email}
+      <i class="fas fa-at"></i>
     </a>
     <a
       class="address__line bg-linkedin"
@@ -20,7 +19,7 @@ function addAddress() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="fab fa-linkedin"></i> Linkedin
+      <i class="fab fa-linkedin"></i>
     </a>
     <a
       class="address__line bg-github"
@@ -28,7 +27,7 @@ function addAddress() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="fab fa-github-square"></i> Github
+      <i class="fab fa-github-square"></i>
     </a>
     <a
       class="address__line bg-resume"

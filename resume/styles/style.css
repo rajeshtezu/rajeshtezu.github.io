@@ -173,7 +173,7 @@ p {
   font-size: 1rem;
 }
 
-.agreegate {
+.aggregate {
   font-weight: bold;
   color: var(--black);
 }
@@ -183,7 +183,7 @@ p {
   outline: none;
   border: none;
   background: var(--five);
-  color: var(--one);
+  color: var(--white);
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -191,7 +191,7 @@ p {
 }
 
 .print-me:hover {
-  color: var(--white);
+  background-color: var(--two);
 }
 
 ul li {

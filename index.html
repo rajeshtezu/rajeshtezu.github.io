@@ -55,44 +55,44 @@
           <h1 class="name">Rajesh Kumar</h1>
 
           <section class="content--child">
-            <address id="address"></address>
+            <address id="address" class="address"></address>
 
             <div class="about-me">
               <p class="hi-there"><span class="emoji">👋</span> Hi There!</p>
               <p id="about-me"></p>
             </div>
           </section>
+
+          <!-- Subscription form - start -->
+          <form id="subscription-form" class="subscription-form">
+            <div class="input-container">
+              <!-- <label
+                for="email"
+                aria-placeholder="abc@xyz.com"
+                aria-required="true"
+                class="email-label"
+              >
+                Email*
+              </label> -->
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="abc@xyz.com"
+                required
+              />
+            </div>
+
+            <button type="submit" class="subscribe-btn">
+              <span class="subscribe-text">Get Notified</span>
+              <i class="fas fa-bell bell-icon"></i>
+            </button>
+          </form>
+          <!-- Subscription form - end -->
         </div>
       </header>
 
       <section class="content--child content--child__right" style="flex: 0.7">
-        <!-- Subscription form - start -->
-        <form id="subscription-form" class="subscription-form">
-          <div class="input-container">
-            <label
-              for="email"
-              aria-placeholder="abc@xyz.com"
-              aria-required="true"
-              class="email-label"
-            >
-              Email*
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="abc@xyz.com"
-              required
-            />
-          </div>
-
-          <button type="submit" class="subscribe-btn">
-            <span class="subscribe-text">Get Notified</span>
-            <i class="fas fa-bell bell-icon"></i>
-          </button>
-        </form>
-        <!-- Subscription form - end -->
-
         <h1 class="content-title">
           Would like to learn something? Hit the links below.
         </h1>
