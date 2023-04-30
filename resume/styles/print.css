@@ -53,3 +53,11 @@ hr {
 ul li {
   margin-left: -0.875rem;
 }
+
+.print-me-mobile {
+  display: none !important;
+}
+
+.print-me {
+  display: none !important;
+}

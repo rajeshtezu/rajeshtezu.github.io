@@ -11,16 +11,25 @@ const edDiv = document.getElementById('education');
 const workedRecentlyDiv = document.getElementById('workedOnRecently');
 const familiarDiv = document.getElementById('familiarWith');
 const printMeDiv = document.getElementById('printMe');
+const printMobileDiv = document.getElementById('print-mobile');
 
 printMeDiv.addEventListener('click', () => {
-  printMeDiv.style.display = 'none';
+  handlePrint(printMeDiv);
+});
+
+printMobileDiv.addEventListener('click', () => {
+  handlePrint(printMobileDiv);
+});
+
+function handlePrint(element) {
+  element.style.display = 'none';
   window.print();
-  printMeDiv.style.display = 'block';
+  element.style.display = 'block';
 
   logEvent(analytics, 'resume_downloaded', {
     name: 'resume',
   });
-});
+}
 
 function renderExperience() {
   const template = experience.reduce((acc, exp) => {

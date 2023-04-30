@@ -194,6 +194,10 @@ p {
   background-color: var(--two);
 }
 
+.print-me-mobile {
+  display: none;
+}
+
 ul li {
   margin-left: -0.875rem;
 }

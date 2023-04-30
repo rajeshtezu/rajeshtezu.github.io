@@ -6,15 +6,15 @@ html {
   .main-container {
     margin: 1.5rem 1.5rem 3rem 1.5rem;
   }
-
-  .print-me {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 990px) {
   .main-container {
     margin: 1.5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .print-me {
+    display: none;
   }
 
   .banner {
@@ -28,6 +28,20 @@ html {
 }
 
 @media screen and (max-width: 760px) {
+  .print-me-mobile {
+    display: block;
+    padding: 0.25rem 1rem;
+    outline: none;
+    border: none;
+    background: var(--five);
+    color: var(--white);
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+
   hr {
     margin: 1.5rem 0 0 0;
   }
