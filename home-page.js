@@ -99,6 +99,15 @@ async function main() {
 
 // Subscription
 async function subscribe(email, mobile) {
+  const trimmedEmail = email?.trim();
+  let subscribedEmails = JSON.parse(localStorage.getItem('subscription'));
+
+  if (subscribedEmails.include(trimmedEmail)) {
+    alert('You have already subscribed.');
+
+    return;
+  }
+
   try {
     const response = await fetch(environment.subscriptionUrl, {
       method: 'POST',
@@ -106,9 +115,11 @@ async function subscribe(email, mobile) {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, mobile }),
+      body: JSON.stringify({ trimmedEmail, mobile }),
     });
 
+    subscribedEmails = [...subscribedEmails, trimmedEmail];
+    localStorage.setItem('subscription', JSON.stringify(subscribedEmails));
     console.log('Response: ', response);
   } catch (err) {
     console.error(err);
