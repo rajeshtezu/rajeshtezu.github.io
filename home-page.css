@@ -30,7 +30,7 @@ a {
   display: flex;
   justify-content: center;
   flex: 0.3;
-  height: calc(100vh - 3rem);
+  min-height: calc(100vh - 3rem);
   max-width: 31rem;
   background-image: linear-gradient(45deg, var(--one), transparent);
   padding: 1.5rem 0;
@@ -127,6 +127,7 @@ a {
 
 .content--child__right {
   height: calc(100vh - 9.14rem);
+  min-height: 46.5rem;
   overflow-y: auto;
 }
 
