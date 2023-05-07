@@ -30,6 +30,7 @@ a {
   display: flex;
   justify-content: center;
   flex: 0.3;
+  height: calc(100vh - 3rem);
   max-width: 31rem;
   background-image: linear-gradient(45deg, var(--one), transparent);
   padding: 1.5rem 0;
@@ -124,6 +125,11 @@ a {
   /* overflow-y: auto; */
 }
 
+.content--child__right {
+  height: calc(100vh - 9.14rem);
+  overflow-y: auto;
+}
+
 .address {
   text-align: center;
 }
@@ -190,6 +196,7 @@ a {
   background-color: var(--text-color);
   color: white;
   padding: 1rem 0;
+  width: calc(100vw - 31rem);
 }
 
 .footer--name a {

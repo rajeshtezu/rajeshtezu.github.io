@@ -6,6 +6,15 @@ html {
   .header {
     padding: 3rem;
   }
+
+  /* TODO: Check why it's needed - style in home-page.css should have worked */
+  .content--child__right {
+    height: calc(100vh - 6.15rem);
+  }
+
+  .footer {
+    width: calc(100vw - 32rem);
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -36,6 +45,11 @@ html {
   .content--child__right {
     margin-left: 0;
     margin-top: 1.5rem;
+    height: auto;
+  }
+
+  .footer {
+    width: auto;
   }
 
   .link-container {
