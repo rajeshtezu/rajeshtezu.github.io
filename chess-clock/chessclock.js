@@ -6,11 +6,13 @@ const p1BtnElm = document.getElementById('p1Btn');
 const p2BtnElm = document.getElementById('p2Btn');
 const playersBtnContainerElm = document.getElementById('player-btn-container');
 // const fullScreenBtnElm = document.getElementById('make-full-screen');
+const setOwnTimeBtnElm = document.getElementById('set-own-time');
 const resetBtnElm = document.getElementById('reset');
 
 chessClockBtnElm.addEventListener('click', handleChessClockTimeSet);
 p1BtnElm.addEventListener('click', handleP1BtnClick);
 p2BtnElm.addEventListener('click', handleP2BtnClick);
+setOwnTimeBtnElm.addEventListener('click', handleSetOwnTime);
 resetBtnElm.addEventListener('click', handleReset);
 // fullScreenBtnElm.addEventListener('click', handleFullScreen);
 
@@ -78,7 +80,12 @@ function startP2Interval() {
   p2Interval = setInterval(() => {
     p2Time = p2Time - 1;
     p2BtnElm.innerHTML = getTimeFromMinute(p2Time);
-    console.log('p2Time', p2Time);
+
+    if (p2Time === 0) {
+      clearInterval(p2Interval);
+      init();
+      alert('White Won!');
+    }
   }, 1000);
 }
 
@@ -89,7 +96,11 @@ function startP1Interval() {
     p1Time = p1Time - 1;
     p1BtnElm.innerHTML = getTimeFromMinute(p1Time);
 
-    console.log('p1Time', p1Time);
+    if (p1Time === 0) {
+      clearInterval(p1Interval);
+      init();
+      alert('Black Won!');
+    }
   }, 1000);
 }
 
@@ -97,24 +108,37 @@ function getTimeFromMinute(seconds) {
   let mins = Math.floor(seconds / 60);
   let secs = seconds % 60;
 
+  mins = mins < 10 ? `0${mins}` : mins;
+  secs = secs < 10 ? `0${secs}` : secs;
+
   return `${mins}:${secs}`;
 }
 
-function handleReset() {
-  reset();
+function handleSetOwnTime() {
+  setOwnTime();
 
   formElm.classList.remove('no-display');
   btnContainerElm.classList.add('no-display');
 }
 
-function reset() {
+function setOwnTime() {
   localStorage.setItem('p1Time', 0);
   localStorage.setItem('p2Time', 0);
   timeInputElm.value = undefined;
+
   init();
 }
 
+function handleReset(event) {
+  event.preventDefault();
+  init();
+  event.stopPropagation();
+}
+
 function init() {
+  clearInterval(p1Interval);
+  clearInterval(p2Interval);
+
   p1Time = Number(localStorage.getItem('p1Time')) || DEFAULT_TIME;
   p2Time = Number(localStorage.getItem('p2Time')) || DEFAULT_TIME;
 
