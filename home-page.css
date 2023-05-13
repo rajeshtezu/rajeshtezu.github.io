@@ -275,3 +275,8 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+.dialog {
+  border: none;
+  border-radius: 8px;
+}

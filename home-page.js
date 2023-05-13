@@ -6,6 +6,8 @@ const aboutMeElm = document.getElementById('about-me');
 const techEdLinksElm = document.getElementById('tech-ed-links');
 const otherEdLinksElm = document.getElementById('other-ed-links');
 const subscriptionFormElm = document.getElementById('subscription-form');
+const successModal = document.getElementById('success');
+const alreadySubscribedModal = document.getElementById('already-subscribed');
 
 function addAddress() {
   try {
@@ -100,10 +102,12 @@ async function main() {
 // Subscription
 async function subscribe(email, mobile) {
   const trimmedEmail = email?.trim();
-  let subscribedEmails = JSON.parse(localStorage.getItem('subscription'));
+  let subscribedEmails = JSON.parse(localStorage.getItem('subscription')) || [];
 
-  if (subscribedEmails.include(trimmedEmail)) {
-    alert('You have already subscribed.');
+  if (subscribedEmails.includes(trimmedEmail)) {
+    alreadySubscribedModal.showModal();
+
+    setTimeout(() => alreadySubscribedModal.close(), 2000);
 
     return;
   }
@@ -120,6 +124,9 @@ async function subscribe(email, mobile) {
 
     subscribedEmails = [...subscribedEmails, trimmedEmail];
     localStorage.setItem('subscription', JSON.stringify(subscribedEmails));
+
+    successModal.showModal();
+    setTimeout(() => successModal.close(), 1000);
     console.log('Response: ', response);
   } catch (err) {
     console.error(err);
@@ -138,7 +145,6 @@ if (subscriptionFormElm) {
 
       await subscribe(email, 'NA');
       subscriptionFormElm.reset();
-      alert('Subscribed successfully.');
     } catch (error) {
       console.error('Subscription Error: ', error);
     } finally {
