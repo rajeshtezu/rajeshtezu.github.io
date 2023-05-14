@@ -10,28 +10,44 @@ body {
   background-color: rgba(153, 157, 160, 1);
 }
 
-.clock-form {
-  font-size: 1.5rem;
+.main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.clock-form {
+  width: 15rem;
+  font-size: 1.5rem;
 }
 
 label,
 input,
 button {
-  display: block;
   margin-bottom: 0.5rem;
-  width: 15rem;
+  width: 100%;
 }
 
 .time-input {
-  height: 2rem;
+  height: 3rem;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
 }
 
 .set-time-btn {
   font-size: 1.25rem;
+  padding: 2rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: black;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 .btn-container {
@@ -39,10 +55,10 @@ button {
   flex-direction: column;
   align-items: center;
   margin: 1rem;
+  width: 15rem;
 }
 
 .timer-btn {
-  /* background-color: green; */
   color: white;
   cursor: pointer;
   padding: 2rem;
@@ -67,7 +83,6 @@ button {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.5;
-  /* background-color: lightgrey; */
 }
 
 .reset-btn {
@@ -79,4 +94,46 @@ button {
 
 .no-display {
   display: none;
+}
+
+.start-dialog {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.start-btn {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.generic-dialog {
+  border: none;
+  border-radius: 8px;
+}
+
+.message {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.ok {
+  float: right;
+  width: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
 }

@@ -5,16 +5,21 @@ const btnContainerElm = document.getElementById('btn-container');
 const p1BtnElm = document.getElementById('p1Btn');
 const p2BtnElm = document.getElementById('p2Btn');
 const playersBtnContainerElm = document.getElementById('player-btn-container');
-// const fullScreenBtnElm = document.getElementById('make-full-screen');
 const setOwnTimeBtnElm = document.getElementById('set-own-time');
 const resetBtnElm = document.getElementById('reset');
+const startDialog = document.getElementById('start-dialog');
+const startBtnElm = document.getElementById('start-btn');
+const dialogElm = document.getElementById('generic-dialog');
+const messageElm = document.getElementById('message');
+const okElm = document.getElementById('dialog-ok');
 
 chessClockBtnElm.addEventListener('click', handleChessClockTimeSet);
 p1BtnElm.addEventListener('click', handleP1BtnClick);
 p2BtnElm.addEventListener('click', handleP2BtnClick);
 setOwnTimeBtnElm.addEventListener('click', handleSetOwnTime);
 resetBtnElm.addEventListener('click', handleReset);
-// fullScreenBtnElm.addEventListener('click', handleFullScreen);
+startBtnElm.addEventListener('click', handleStart);
+okElm.addEventListener('click', () => dialogElm.close());
 
 const DEFAULT_TIME = 5 * 60;
 
@@ -31,7 +36,7 @@ function handleChessClockTimeSet(event) {
   const chessTime = Number(chessForm.get('clockTime'));
 
   if (chessTime < 5) {
-    alert('Please set minimum time of 5 minutes.');
+    showDialog('Please set minimum time of 5 minutes.');
     // TODO
     timeInputElm.value = undefined;
     // chessForm.set('clockTime', 0);
@@ -40,7 +45,7 @@ function handleChessClockTimeSet(event) {
   }
 
   if (chessTime > 60) {
-    alert('Please set time less than 60 minutes');
+    showDialog('Please set time less than 60 minutes.');
     // TODO
     timeInputElm.value = undefined;
     // chessForm.set('clockTime', 0);
@@ -54,6 +59,7 @@ function handleChessClockTimeSet(event) {
   formElm.classList.add('no-display');
 
   init();
+  showStart();
 
   event.stopPropagation();
 }
@@ -75,36 +81,38 @@ function handleP2BtnClick(event) {
 }
 
 function startP2Interval() {
-  clearInterval(p1Interval);
-
   p2Interval = setInterval(() => {
     p2Time = p2Time - 1;
-    p2BtnElm.innerHTML = getTimeFromMinute(p2Time);
+    p2BtnElm.innerHTML = getTimeFromMinutes(p2Time);
 
     if (p2Time === 0) {
       clearInterval(p2Interval);
       init();
-      alert('White Won!');
+      showStart();
+      showDialog('White Won!');
     }
   }, 1000);
+
+  clearInterval(p1Interval);
 }
 
 function startP1Interval() {
-  clearInterval(p2Interval);
-
   p1Interval = setInterval(() => {
     p1Time = p1Time - 1;
-    p1BtnElm.innerHTML = getTimeFromMinute(p1Time);
+    p1BtnElm.innerHTML = getTimeFromMinutes(p1Time);
 
     if (p1Time === 0) {
       clearInterval(p1Interval);
       init();
-      alert('Black Won!');
+      showStart();
+      showDialog('Black Won!');
     }
   }, 1000);
+
+  clearInterval(p2Interval);
 }
 
-function getTimeFromMinute(seconds) {
+function getTimeFromMinutes(seconds) {
   let mins = Math.floor(seconds / 60);
   let secs = seconds % 60;
 
@@ -114,11 +122,16 @@ function getTimeFromMinute(seconds) {
   return `${mins}:${secs}`;
 }
 
-function handleSetOwnTime() {
+function handleSetOwnTime(e) {
+  e.preventDefault();
+
+  closeStart();
   setOwnTime();
 
   formElm.classList.remove('no-display');
   btnContainerElm.classList.add('no-display');
+
+  e.stopPropagation();
 }
 
 function setOwnTime() {
@@ -132,6 +145,7 @@ function setOwnTime() {
 function handleReset(event) {
   event.preventDefault();
   init();
+  showStart();
   event.stopPropagation();
 }
 
@@ -150,18 +164,31 @@ function init() {
     p2BtnElm.classList.remove('disable-btn');
   }
 
-  p1BtnElm.innerHTML = getTimeFromMinute(p1Time);
-  p2BtnElm.innerHTML = getTimeFromMinute(p2Time);
+  p1BtnElm.innerHTML = getTimeFromMinutes(p1Time);
+  p2BtnElm.innerHTML = getTimeFromMinutes(p2Time);
 }
 
-function handleFullScreen(event) {
-  event.preventDefault();
+function handleStart(e) {
+  handleP2BtnClick(e);
+  closeStart();
+}
 
-  playersBtnContainerElm.requestFullscreen();
+function showStart() {
+  startBtnElm.classList.remove('no-display');
+  startDialog.showModal();
+}
 
-  event.stopPropagation();
+function closeStart() {
+  startBtnElm.classList.add('no-display');
+  startDialog.close();
+}
+
+function showDialog(message) {
+  messageElm.innerText = message;
+  dialogElm.showModal();
 }
 
 (() => {
   init();
+  showStart();
 })();

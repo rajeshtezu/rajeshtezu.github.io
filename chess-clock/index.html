@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
+    <main class="main">
       <h1 style="text-align: center">Chess Timer</h1>
       <!-- Time input form -->
       <form id="clockForm" class="clock-form no-display">
@@ -19,28 +19,33 @@
           class="time-input"
           placeholder="Enter time in minute"
           id="time-input"
+          min="5"
+          max="60"
         />
-        <button id="setClockTimeBtn" class="set-time-btn">
-          Set Chess time
-        </button>
-
-        <!-- <dialog id></dialog> -->
+        <button id="setClockTimeBtn" class="set-time-btn">Set time</button>
       </form>
 
       <!-- Player's timer buttons -->
-
       <div id="btn-container" class="btn-container">
         <div id="player-btn-container">
           <button id="p1Btn" class="timer-btn p-white">Player-1</button>
           <button id="p2Btn" class="timer-btn p-black">Player-2</button>
         </div>
-        <!-- <button id="make-full-screen">Full Screen</button> -->
         <button id="reset" class="reset-btn" style="margin-top: 1rem">
           Reset
         </button>
-        <button id="set-own-time" class="reset-btn">Set Own Time</button>
+        <button id="set-own-time" class="reset-btn">Set own time</button>
       </div>
     </main>
+
+    <dialog id="start-dialog" class="start-dialog">
+      <button id="start-btn" class="start-btn">Start</button>
+    </dialog>
+
+    <dialog id="generic-dialog" class="generic-dialog">
+      <p id="message" class="message"></p>
+      <button id="dialog-ok" class="ok">Ok</button>
+    </dialog>
 
     <script src="./chessclock.js" type="module" defer></script>
   </body>
