@@ -71,7 +71,7 @@ function addEdLinks(linkList, elm) {
     ${linkList.reduce((acc, item) => {
       acc += `
         <li>
-          <a href="${item.link}" target="_blank" style="color: #0969da">${item.text}</a>
+          <a href="${item.link}" target="_blank">${item.text}</a>
         </li>
       `;
 
