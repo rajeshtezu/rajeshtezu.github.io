@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="chessclock.css" />
-    <title>Document</title>
+    <title>Chess Clock</title>
   </head>
   <body>
     <main class="main">
-      <h1 style="text-align: center">Chess Timer</h1>
+      <h1 style="text-align: center">Chess Clock</h1>
       <!-- Time input form -->
       <form id="clockForm" class="clock-form no-display">
-        <label for="clockTime">Play Time</label>
+        <label for="clockTime">Play time</label>
         <input
           type="number"
           name="clockTime"
@@ -22,7 +22,7 @@
           min="5"
           max="60"
         />
-        <button id="setClockTimeBtn" class="set-time-btn">Set time</button>
+        <button id="setClockTimeBtn" class="set-time-btn">Set duration</button>
       </form>
 
       <!-- Player's timer buttons -->
@@ -40,7 +40,7 @@
     <dialog id="start-dialog" class="start-dialog">
       <button id="start-btn" class="start-btn">Start</button>
       <button id="set-own-time" class="reset-btn change-time">
-        Change time
+        Change duration
       </button>
     </dialog>
 
