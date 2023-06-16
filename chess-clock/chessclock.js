@@ -69,6 +69,7 @@ function handleP1BtnClick(event) {
   startP2Interval();
   p1BtnElm.classList.add('disable-btn');
   p2BtnElm.classList.remove('disable-btn');
+  playSound();
   event.stopPropagation();
 }
 
@@ -77,10 +78,14 @@ function handleP2BtnClick(event) {
   startP1Interval();
   p2BtnElm.classList.add('disable-btn');
   p1BtnElm.classList.remove('disable-btn');
+  playSound();
   event.stopPropagation();
 }
 
 function startP2Interval() {
+  p2BtnElm.classList.add('shadow-black');
+  p1BtnElm.classList.remove('shadow-white');
+
   p2Interval = setInterval(() => {
     p2Time = p2Time - 1;
     p2BtnElm.innerHTML = getTimeFromMinutes(p2Time);
@@ -97,6 +102,9 @@ function startP2Interval() {
 }
 
 function startP1Interval() {
+  p1BtnElm.classList.add('shadow-white');
+  p2BtnElm.classList.remove('shadow-black');
+
   p1Interval = setInterval(() => {
     p1Time = p1Time - 1;
     p1BtnElm.innerHTML = getTimeFromMinutes(p1Time);
@@ -186,6 +194,14 @@ function closeStart() {
 function showDialog(message) {
   messageElm.innerText = message;
   dialogElm.showModal();
+}
+
+function playSound() {
+  const audio = new Audio(
+    '../assets/mixkit-on-or-off-light-switch-tap-2585.wav'
+  );
+
+  audio.play();
 }
 
 (() => {
