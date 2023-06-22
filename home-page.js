@@ -1,10 +1,11 @@
-import { addressData, aboutMeText } from './home-page-data.js';
+import { addressData, aboutMeText, projects } from './home-page-data.js';
 import { environment } from './environment.js';
 
 const addressElm = document.getElementById('address');
 const aboutMeElm = document.getElementById('about-me');
 const techEdLinksElm = document.getElementById('tech-ed-links');
 const otherEdLinksElm = document.getElementById('other-ed-links');
+const projectLinksElm = document.getElementById('project-links');
 const subscriptionFormElm = document.getElementById('subscription-form');
 const successModal = document.getElementById('success');
 const alreadySubscribedModal = document.getElementById('already-subscribed');
@@ -97,6 +98,7 @@ async function main() {
   addAboutMe();
   await addTechEdLinks();
   await addOtherEdLinks();
+  addEdLinks(projects, projectLinksElm);
 }
 
 // Subscription

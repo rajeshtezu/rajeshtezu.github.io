@@ -5,6 +5,21 @@ export const addressData = {
   resume: './resume',
 };
 
+export const projects = [
+  {
+    text: 'Chess Clock',
+    link: '/chess-clock',
+  },
+  {
+    text: 'Tic Tac Toe',
+    link: '/tic-tac-toe',
+  },
+  {
+    text: 'Drink Water (Chrome extension)',
+    link: 'https://chrome.google.com/webstore/detail/drink-water/jagglpaaohcbjhbdgdjinoiaeegbnmeg',
+  },
+];
+
 export const aboutMeText = `
   <p> 
     I'm a Software Engineer by profession. I enjoy exploring new technologies and building something out of it. 
