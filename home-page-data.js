@@ -7,6 +7,10 @@ export const addressData = {
 
 export const projects = [
   {
+    text: 'Word Power Made Easy - Quiz',
+    link: '/wpme'
+  },
+  {
     text: 'Chess Clock',
     link: '/chess-clock',
   },
