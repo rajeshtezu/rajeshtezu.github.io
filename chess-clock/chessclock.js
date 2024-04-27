@@ -196,11 +196,9 @@ function showDialog(message) {
   dialogElm.showModal();
 }
 
-function playSound() {
-  const audio = new Audio(
-    '../assets/mixkit-on-or-off-light-switch-tap-2585.wav'
-  );
+const audio = new Audio('../assets/mixkit-on-or-off-light-switch-tap-2585.wav');
 
+function playSound() {
   audio.play();
 }
 

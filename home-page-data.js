@@ -8,7 +8,7 @@ export const addressData = {
 export const projects = [
   {
     text: 'Word Power Made Easy - Quiz',
-    link: '/wpme'
+    link: '/wpme',
   },
   {
     text: 'Chess Clock',
@@ -17,6 +17,10 @@ export const projects = [
   {
     text: 'Tic Tac Toe',
     link: '/tic-tac-toe',
+  },
+  {
+    text: 'Ludo Dice',
+    link: '/dice',
   },
   {
     text: 'Drink Water (Chrome extension)',
