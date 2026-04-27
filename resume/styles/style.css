@@ -1,5 +1,10 @@
 @import url('../../common-style.css');
 
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
 hr {
   border: 1px solid var(--four);
   background: var(--four);

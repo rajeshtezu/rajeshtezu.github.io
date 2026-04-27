@@ -1,3 +1,17 @@
+const webexJsSdkLink = `<a href="https://github.com/webex/webex-js-sdk" target="_blank" rel="noopener noreferrer">webex-js-sdk</a>`;
+const ccSDKLink = `<a href="https://github.com/webex/webex-js-sdk/tree/next/packages/%40webex/contact-center" target="_blank" rel="noopener noreferrer">Contact Center SDK</a>`;
+const meetingsSDKLink = `<a href="https://github.com/webex/webex-js-sdk/tree/next/packages/%40webex/plugin-meetings" target="_blank" rel="noopener noreferrer">Meetings SDK</a>`;
+const callingSDKLink = `<a href="https://github.com/webex/webex-js-sdk/tree/next/packages/calling" target="_blank" rel="noopener noreferrer">Calling SDK</a>`;
+const widgetRepoLink = `<a href="https://github.com/webex/widgets" target="_blank" rel="noopener noreferrer">widgets</a>`
+const controlHubLink = `<a href="https://admin.webex.com/" target="_blank" rel="noopener noreferrer">Control Hub</a>`;
+const developerPortalLink = `<a href="https://developer.webex.com/" target="_blank" rel="noopener noreferrer">Developer Portal</a>`;
+const multiStreamQuickStartLink = `<a href="https://developer.webex.com/meeting/docs/sdks/webex-meetings-sdk-web-multistream-quick-start" target="_blank" rel="noopener noreferrer">MultiStream QuickStart</a>`;
+const multiStreamComprehensiveLink = `<a href="https://developer.webex.com/meeting/docs/multistream-comprehensive-guide" target="_blank" rel="noopener noreferrer">MultiStream Comprehensive</a>`;
+const ccWidgetsDocsLink = `<a href="https://developer.webex.com/webex-contact-center/docs/cc-web-widgets-introduction" target="_blank" rel="noopener noreferrer">Contact Center React Widgets</a>`;
+const sipRfcLink = `<a href="https://www.rfc-editor.org/rfc/rfc3261" target="_blank" rel="noopener noreferrer">SIP</a>`;
+const webRTCLink = `<a href="https://webrtc.org/" target="_blank" rel="noopener noreferrer">WebRTC</a>`;
+const webRtcYoutubeLink = `<a href="https://www.youtube.com/watch?v=twngKzYueIs&list=PL036qz1Cm84kxchs7dVzHIsBN1JxG5Aek" target="_blank" rel="noopener noreferrer">WebRTC Fundamentals Tutorials</a>`;
+
 const experience = [
   {
     organization: 'Cisco Systems | Webex',
@@ -6,7 +20,16 @@ const experience = [
     workedFrom: 'MAY 2022',
     workedTo: 'PRESENT',
 
-    didWhat: [`Started working on webex javascript SDK`],
+    didWhat: [
+      `Started as a contributor on the javascript ${meetingsSDKLink} on ${webexJsSdkLink} repo.`,
+      `Contributed to the ${controlHubLink} to add settings page for shortcut embedded apps. Tech used: Angular, RxJs, NgRx, Nx Workspace (Micro Frontend), etc`,
+      `Contributed to the AI assistant UI/UX on ${developerPortalLink}. Lead the development of the frontend feature and made major contributions during the feature release. Tech used: React, Typescript, LLM Proxy, etc`,
+      `Contributed to the ${developerPortalLink} for multiple docs. e.g. -- ${multiStreamQuickStartLink}, ${multiStreamComprehensiveLink} and all the docs under ${ccWidgetsDocsLink}`,
+      `Self taught realtime technologies such as ${sipRfcLink}, ${webRTCLink}, etc and gave sessions to the team on the same to understand the core foundation of the products being developed. Also, created ${webRtcYoutubeLink} for future reference.`,
+      `Contributed to the development of ${ccSDKLink} and ${widgetRepoLink}.`,
+      `Contributed to the Webex ${callingSDKLink} for various smaller tasks and to the major refactor of the transport protocol from http to websocket for all sort or request/response and notifications. Tech used: Node.js, Typescript, WebSocket, WebRTC, SIP, etc`,
+      `Worked on multiple features and bug fixes across the projects mentioned above.`,
+    ],
   },
   {
     organization: 'EdgeVerve Systems Ltd',
