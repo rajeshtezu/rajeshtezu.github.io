@@ -11,6 +11,8 @@ const ccWidgetsDocsLink = `<a href="https://developer.webex.com/webex-contact-ce
 const sipRfcLink = `<a href="https://www.rfc-editor.org/rfc/rfc3261" target="_blank" rel="noopener noreferrer">SIP</a>`;
 const webRTCLink = `<a href="https://webrtc.org/" target="_blank" rel="noopener noreferrer">WebRTC</a>`;
 const webRtcYoutubeLink = `<a href="https://www.youtube.com/watch?v=twngKzYueIs&list=PL036qz1Cm84kxchs7dVzHIsBN1JxG5Aek" target="_blank" rel="noopener noreferrer">WebRTC Fundamentals Tutorials</a>`;
+const webClientLink = `<a href="https://web.webex.com/" target="_blank" rel="noopener noreferrer">Webex Web Client</a>`;
+const click2CallLink = `<a href="https://web.webex.com/click2call?regionId=US&id=fiM6PP&isC2CEnabled=true" target="_blank" rel="noopener noreferrer">Click2Call</a>`;
 
 const experience = [
   {
@@ -25,6 +27,7 @@ const experience = [
       `Contributed to the ${controlHubLink} to add settings page for shortcut embedded apps. Tech used: Angular, RxJs, NgRx, Nx Workspace (Micro Frontend), etc`,
       `Contributed to the AI assistant UI/UX on ${developerPortalLink}. Lead the development of the frontend feature and made major contributions during the feature release. Tech used: React, Typescript, LLM Proxy, etc`,
       `Contributed to the ${developerPortalLink} for multiple docs. e.g. -- ${multiStreamQuickStartLink}, ${multiStreamComprehensiveLink} and all the docs under ${ccWidgetsDocsLink}`,
+      `Added Click2Call feature to the ${webClientLink}. Worked on this feature alone and built it from scratch to end. Tech used: React, Typescript, Calling SDK, etc`,
       `Self taught realtime technologies such as ${sipRfcLink}, ${webRTCLink}, etc and gave sessions to the team on the same to understand the core foundation of the products being developed. Also, created ${webRtcYoutubeLink} for future reference.`,
       `Contributed to the development of ${ccSDKLink} and ${widgetRepoLink}.`,
       `Contributed to the Webex ${callingSDKLink} for various smaller tasks and to the major refactor of the transport protocol from http to websocket for all sort or request/response and notifications. Tech used: Node.js, Typescript, WebSocket, WebRTC, SIP, etc`,
@@ -105,6 +108,10 @@ const workedOnRecently = [
   {
     category: `Frontend`,
     value: `Angular, RxJs, NgRx, React.js, HTML[5], CSS[3], Less, Saas, Scss, Ant.design, ng-zorro, Bootstrap, Material UI, chart.js, karma, jasmine, jest`,
+  },
+  {
+    category: `Real-time technologies`,
+    value: `WebRTC, SIP`,
   },
   {
     category: `Server Runtime`,
